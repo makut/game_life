@@ -8,7 +8,7 @@ before_install:
   - pip install -U pip
   - pip install -U pytest
 install:
-  - pip install codecov
-script: pytest test/main.py
+  - pip install pytest-cov codecov
+script: pytest -s --cov=game_process test/main.py
 after_success:
   - codecov
